@@ -14,14 +14,13 @@ public class Item {
     }
 
     public String getTitle() {
-        return title;0
+        return this.title;
     }
 
     @Override
     public String toString() {
-        return "Item: " +
-                "value: " + value +
-                ", title:'" + title + '\'';
+        return "  '" + this.title + "'" +
+                " - $" + this.value;
 
     }
 }
