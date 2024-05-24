@@ -1,6 +1,6 @@
 package models;
 
-public class Item {
+public class Item implements Comparable<Item>{
     private double value;
     private String title;
 
@@ -22,5 +22,10 @@ public class Item {
         return "  '" + this.title + "'" +
                 " - $" + this.value;
 
+    }
+
+    @Override
+    public int compareTo(Item otherItem) {
+        return Double.compare(this.value, otherItem.value);
     }
 }
